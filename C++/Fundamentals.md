@@ -156,4 +156,37 @@ s.size();
 ```
 Not sure of a great way to traverse a stack with a loop aside from popping through it. You can hack something together -- but that is up to you to figure out.
 
+### (Unordered) Sets
+Perhaps one of the less utilized built-in structures in classes. Conceptualized as a collection of elements with unique hashes, which allows for
+constant time lookups if something is contained within the set.
+Commonly sets are used to make sure there is no repeat solutions and/or see if we have touched on a subproblem before.
+Additionally, unordered_sets are similar in that they hold no internal order. In many use cases, an unordered_set is faster and works the same as a regular set.
+```cpp
+set<string> names; //default_constructor
+unordered_set<int> vals; 
+unordered_set<pair<int, int>> visited_nodes; // if you had a graph with each node denoted by x/y pairs
+
+// insert an element to the set
+my_set.insert("John");
+
+// remove an element in the set
+my_set.remove("John");
+
+// see if an item with within the set
+my_set.count("John") == 1 // count will be 1 if the key is present, otherwise 0
+
+// iterating over the set can be done through the following:
+for( auto it = my_set.begin(); it != my_set.end(); ++it){
+    cout << *it << "\n";
+}
+//iterators can also be done backwards. my_set.rbegin(), and go until it != my_set.rend()
+// have to use iterators, as there is no simple indexing of the set
+// range style for loop
+for (auto el : my_set) {
+    cout << el << "\n";
+}
+```
+
+### (Hash) Maps
+The legendary datastructure :O
 
