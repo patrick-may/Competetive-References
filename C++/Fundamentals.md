@@ -188,5 +188,30 @@ for (auto el : my_set) {
 ```
 
 ### (Hash) Maps
-The legendary datastructure :O
+Again, an ordered or unordered version of the datastructure exists. I think unordered maps are faster... but not sure. Use whichever you prefer.
+Maps consist of key value pairs that allow for accessing the values of the map through the key in constant time.
+
+```cpp
+map<Key_T, Value_T> my_map;
+unordered_map<string, int> frequency_ct;
+
+my_map.count(key_value) == 1 //returns true if a key is present, otherwise returns 0
+
+//accessing elements
+value_type my_val = my_map[key_value] //if key_value is present in the map, you get my_val
+// if key_value is not present, you will get an error!
+
+// inserting elements
+my_map[new_key_val] = new_value // creats a key in the map associated to new_value. if key already exists, overwrites the old value
+
+//iterating through the map is done with iterators, similar to the set.
+// however, the map is a group of pairs, not individual elements
+for(auto itr = my_map.begin(); itr != my_map.end(); ++itr){
+    cout << "key: " << itr->first <<"\t pairs to value:" << itr->second  <<"\n";
+}
+
+// note that an unordered_map we cannot expect element pairs to be printed in a certain order
+```
+
+There are a few other structures that are a part of the C++ STL, but these are the main ones that I find most useful. 
 
