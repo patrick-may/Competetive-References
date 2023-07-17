@@ -2,6 +2,8 @@
 
 Within programming problems, sometimes various math formulas are useful. Curated here will be various different formulas and a brief explanation on how to use them.
 
+# Combinatorics
+
 ${n \choose k} = \frac{n!}{k!(n-k)!}$
 Used for counting the number of combinations in something. Commonly thought of as the "$_n C _k$"
 
@@ -21,4 +23,20 @@ double maxArea(double a, double b, double c, double d) {
     double s = (a + b + c + d ) / 2;
     return sqrt((s - a) * (s - b) * (s - c) * (s - d))
 }
+```
+
+## Least Common Multiple and Greatest Common Divisor
+
+Are values between two integers. Basic algorithms:
+
+```py 
+def gcd(a, b):
+    while b:
+        a, b = b, a % b 
+    return a 
+
+def lcm(a, b):
+    soln = (a * b) // gcd(a, b)
+    return soln
+
 ```
