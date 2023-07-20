@@ -37,6 +37,13 @@ input_lengths = map(my_func, input().strip().split())
 input_lengths = list(input_lengths)
 ```
 
+**Fast IO**
+```py 
+input() # very very slow. instead:
+
+from sys import stdin # import and use readline() in lieu of input() 
+stdin.readline() 
+```
 ## Built In Datastructures
 Python has lists, which are collections of objects that can be of various types. They also are commonly used as a stack.
 ```py

@@ -67,6 +67,12 @@ for(int i: other_other_solns){
 
 ```
 
+**Fast IO** is sometimes a necessity. If you are doing 100,000+ input reads, consider using adding the following two lines before doing io stuff:
+```cpp
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+```
+
 **Output formatting** can be accomplished through various hack-y ways, but some of the most common are detailed below:
 ```cpp
 //outputting displaying a boolean value
